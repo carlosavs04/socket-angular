@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AnimalService } from 'src/app/Services/animal.service';
 import { Animal } from 'src/app/Interfaces/animal.interface';
 import { Router } from '@angular/router';
+import { io } from 'socket.io-client';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-animales-table',
@@ -14,8 +17,15 @@ export class AnimalesTableComponent implements OnInit {
   constructor(private animalService: AnimalService, private router: Router) { }
 
   ngOnInit() {
-    this.getAnimales();
-  }
+    const socket = io('http://127.0.0.1:3333')
+      socket.on('news', (data) => {
+        console.log(data)
+        socket.on('new:animal', () => {
+          this.getAnimales()
+      })})
+
+      this.getAnimales()
+    }
 
   getAnimales() {
     this.animalService.getAnimales().subscribe(

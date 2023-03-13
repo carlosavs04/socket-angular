@@ -24,7 +24,6 @@ export class AnimalFormComponent {
   onSubmit(values: Animal) {
     if(this.animalForm.valid) {
       this.animalService.addAnimal(values).subscribe();
-      location.assign('/animales');
     }
   }
 }
