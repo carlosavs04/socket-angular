@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnimalesTableComponent } from './Components/animales-table/animales-table.component';
 import { AnimalFormComponent } from './Components/animal-form/animal-form.component';
+import { ConsolaFormComponent } from './Components/consola-form/consola-form.component';
+import { ConsolasTableComponent } from './Components/consolas-table/consolas-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnimalesTableComponent,
-    AnimalFormComponent
+    AnimalFormComponent,
+    ConsolaFormComponent,
+    ConsolasTableComponent
   ],
   imports: [
     BrowserModule,
