@@ -14,7 +14,9 @@ export class JugadoresTableComponent implements OnInit {
   constructor(private jugadorService: JugadorService, private router: Router) { }
 
   ngOnInit() {
-    this.getJugadores()
+    setInterval(() => {
+      this.getJugadores()
+    }, 10000);
   }
 
   getJugadores() {
