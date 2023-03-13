@@ -3,27 +3,27 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { Animal } from '../Interfaces/animal.interface';
+import { Jugador } from '../Interfaces/jugador.interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AnimalService {
-  private getAnimalesUrl = environment.apiUrl + 'animales/animales';
-  private animalUrl = environment.apiUrl + 'animales/animal';
+export class JugadorService {
+  private getJugadoresUrl = environment.apiUrl + 'jugadores/jugadores';
+  private jugadorUrl = environment.apiUrl + 'jugadores/jugador';
 
   constructor(private Http: HttpClient) { }
 
-  getAnimales(): Observable<Animal[]> {
-    return this.Http.get<Animal[]>(this.getAnimalesUrl)
+  getJugadores(): Observable<Jugador[]> {
+    return this.Http.get<Jugador[]>(this.getJugadoresUrl)
       .pipe(
         retry(3),
         catchError(this.handleError)
       );
   }
 
-  addAnimal(animal: Animal): Observable<Animal> {
-    return this.Http.post<Animal>(this.animalUrl, animal)
+  addJugador(jugador: Jugador): Observable<Jugador> {
+    return this.Http.post<Jugador>(this.jugadorUrl, jugador)
       .pipe(
         catchError(this.handleError)
       );
@@ -41,4 +41,5 @@ export class AnimalService {
 
     return throwError(() => new Error('Algo malo ha ocurrido; por favor, inténtelo de nuevo más tarde.'));
   }
+  
 }

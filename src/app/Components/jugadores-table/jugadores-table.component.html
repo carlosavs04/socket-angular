@@ -1,0 +1,17 @@
+<h1>Lista de jugadores</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Equipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let jugador of jugadores">
+            <td>{{jugador.nombres}}</td>
+            <td>{{jugador.apellidos}}</td>
+            <td>{{jugador.equipo}}</td>
+        </tr>
+    </tbody>
+</table>

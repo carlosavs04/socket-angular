@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnimalesTableComponent } from './Components/animales-table/animales-table.component';
 import { AnimalFormComponent } from './Components/animal-form/animal-form.component';
+import { JugadoresTableComponent } from './Components/jugadores-table/jugadores-table.component';
+import { JugadorFormComponent } from './Components/jugador-form/jugador-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnimalesTableComponent,
-    AnimalFormComponent
+    AnimalFormComponent,
+    JugadoresTableComponent,
+    JugadorFormComponent
   ],
   imports: [
     BrowserModule,
