@@ -4,14 +4,14 @@ import { io } from 'socket.io-client';
   providedIn: 'root'
 })
 export class WebsocketService {
+  public socket = io('http://localhost:3333');
 
   constructor() { }
 
   connect(){
-    const socket = io('http://127.0.0.1:3333')
-      socket.on('news', (data) => {
+      this.socket.on('news', (data) => {
         console.log(data);
-        socket.emit('my other event', 'Hello from Angular');
+        this.socket.emit('my other event', 'Hello from Angular');
       })
   }
 }
