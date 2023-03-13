@@ -1,0 +1,21 @@
+<div class="form-container">
+    <h1>Añadir jugador</h1>
+    <form [formGroup]="jugadorForm" (ngSubmit)="onSubmit(jugadorForm.value)">
+        <label for="nombres">Nombres</label>
+        <input type="text" formControlName="nombres" placeholder="Ingresa los nombres del jugador">
+        <div *ngIf="jugadorForm.get('nombres')?.invalid && (jugadorForm.get('nombres')?.touched || jugadorForm.get('nombres')?.dirty)">
+            <span class="error-message" *ngIf="jugadorForm.get('nombres')?.errors?.['required']">El campo nombres es obligatorio.</span>
+        </div>
+        <label for="apellidos">Apellidos</label>
+        <input type="text" formControlName="apellidos" placeholder="Ingresa los apellidos del jugador">
+        <div *ngIf="jugadorForm.get('apellidos')?.invalid && (jugadorForm.get('apellidos')?.touched || jugadorForm.get('apellidos')?.dirty)">
+            <span class="error-message" *ngIf="jugadorForm.get('apellidos')?.errors?.['required']">El campo apellidos es obligatorio.</span>
+        </div>
+        <label for="equipo">Equipo</label>
+        <input type="text" formControlName="equipo" placeholder="Ingresa el equipo del jugador">
+        <div *ngIf="jugadorForm.get('equipo')?.invalid && (jugadorForm.get('equipo')?.touched || jugadorForm.get('equipo')?.dirty)">
+            <span class="error-message" *ngIf="jugadorForm.get('equipo')?.errors?.['required']">El campo equipo es obligatorio.</span>
+        </div>
+        <button type="submit" class="primary-button" [disabled]="!jugadorForm.valid">Añadir</button>
+    </form>
+</div>

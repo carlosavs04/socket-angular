@@ -9,6 +9,8 @@ import { AnimalesTableComponent } from './Components/animales-table/animales-tab
 import { AnimalFormComponent } from './Components/animal-form/animal-form.component';
 import { ConsolaFormComponent } from './Components/consola-form/consola-form.component';
 import { ConsolasTableComponent } from './Components/consolas-table/consolas-table.component';
+import { JugadoresTableComponent } from './Components/jugadores-table/jugadores-table.component';
+import { JugadorFormComponent } from './Components/jugador-form/jugador-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ConsolasTableComponent } from './Components/consolas-table/consolas-tab
     AnimalesTableComponent,
     AnimalFormComponent,
     ConsolaFormComponent,
-    ConsolasTableComponent
+    ConsolasTableComponent,
+    JugadoresTableComponent,
+    JugadorFormComponent
   ],
   imports: [
     BrowserModule,

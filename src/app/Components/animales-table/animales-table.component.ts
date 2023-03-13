@@ -3,8 +3,6 @@ import { AnimalService } from 'src/app/Services/animal.service';
 import { Animal } from 'src/app/Interfaces/animal.interface';
 import { Router } from '@angular/router';
 import { io } from 'socket.io-client';
-import { environment } from 'src/environments/environment';
-
 
 @Component({
   selector: 'app-animales-table',
