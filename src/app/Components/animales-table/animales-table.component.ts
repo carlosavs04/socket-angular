@@ -14,14 +14,7 @@ export class AnimalesTableComponent implements OnInit {
 
   constructor(private animalService: AnimalService, private router: Router) { }
 
-  ngOnInit() {
-    const socket = io('http://127.0.0.1:3333')
-      socket.on('news', (data) => {
-        console.log(data)
-        socket.on('new:animal', () => {
-          this.getAnimales()
-      })})
-
+    ngOnInit() {
       this.getAnimales()
     }
 
