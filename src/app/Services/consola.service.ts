@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, retry, retryWhen, throwError } from 'rxjs';
+import { catchError, Observable, retry, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Consola } from '../Interfaces/consola.interface';
 
@@ -8,8 +8,8 @@ import { Consola } from '../Interfaces/consola.interface';
   providedIn: 'root'
 })
 export class ConsolaService {
-  private newConsolaUrl:string = environment.apiUrl + '/consolas/consola'
-  private getConsolasUrl:string = environment.apiUrl + '/consolas/consolas'
+  private newConsolaUrl:string = environment.apiUrl + 'consolas/consola'
+  private getConsolasUrl:string = environment.apiUrl + 'consolas/consolas'
 
   constructor(private http:HttpClient) { }
 
