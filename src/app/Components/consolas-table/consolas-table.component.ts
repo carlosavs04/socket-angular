@@ -18,14 +18,10 @@ export class ConsolasTableComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.getConsolas()
 
-    this.eventSource = new EventSource(environment.apiUrl + 'consolas/consolas/stream');
-    this.eventSource.addEventListener('mensaje', (event: MessageEvent) => {
+    this.eventSource = new EventSource(environment.apiUrl + 'consolas/consolas/event');
+    this.eventSource.addEventListener('new:consola', (event) => {
+      console.log('Se ha agregado una nueva consola');
       this.getConsolas()
-    });
-    
-    this.eventSource.addEventListener('error', (event: Event) => {
-      console.error('Error en el servidor de eventos: ', event);
-      setTimeout(() => { this.ngOnInit() }, 5000);
     });
   }
 
