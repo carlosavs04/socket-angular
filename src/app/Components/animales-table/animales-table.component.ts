@@ -29,6 +29,6 @@ export class AnimalesTableComponent implements OnInit {
   }
 
   add() {
-    this.router.navigate(['/animales/add']);
+    this.router.navigate(['/animales/create']);
   }
 }

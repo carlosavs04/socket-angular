@@ -32,7 +32,7 @@ export class ConsolasTableComponent implements OnInit, OnDestroy {
   }
 
   add() {
-    this.router.navigate(['/consolas/add']);
+    this.router.navigate(['/consolas/create']);
   }
 
   ngOnDestroy() {

@@ -11,6 +11,7 @@ import { ConsolaFormComponent } from './Components/consola-form/consola-form.com
 import { ConsolasTableComponent } from './Components/consolas-table/consolas-table.component';
 import { JugadoresTableComponent } from './Components/jugadores-table/jugadores-table.component';
 import { JugadorFormComponent } from './Components/jugador-form/jugador-form.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { JugadorFormComponent } from './Components/jugador-form/jugador-form.com
     ConsolaFormComponent,
     ConsolasTableComponent,
     JugadoresTableComponent,
-    JugadorFormComponent
+    JugadorFormComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@ import { JugadorFormComponent } from './Components/jugador-form/jugador-form.com
 import { JugadoresTableComponent } from './Components/jugadores-table/jugadores-table.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/animales', pathMatch: 'full' },
+  { path: '', redirectTo: '/jugadores', pathMatch: 'full' },
   { path: 'animales', component: AnimalesTableComponent, title: 'Lista de animales'},
   { path: 'animales/create', component: AnimalFormComponent, title: 'Añadir animal'},
   { path: 'consolas', component: ConsolasTableComponent, title: 'Lista de consolas'},

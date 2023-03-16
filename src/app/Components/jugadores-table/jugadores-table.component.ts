@@ -25,6 +25,6 @@ export class JugadoresTableComponent implements OnInit {
   }
 
   add() {
-    this.router.navigate(['/jugadores/add']);
+    this.router.navigate(['/jugadores/create']);
   }
 }
